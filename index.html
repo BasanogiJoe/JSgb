@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework2</title>
+</head>
+
+<body>
+    <h1>Homework2</h1>
+    <script>
+        // Задание 1 //
+
+        let a = 1, b = 1, c, d;
+
+        /*
+        Так как стоит знак ++ перед переменной "a", то прибавляется единица и "a" равно 2. 
+        Тем самым "c" будет равно 2
+         */
+        c = ++a;
+        console.log(c);
+
+        /*
+        Со знаком ++ после переменной "b", переменная "b" увеличится на единицу, 
+        но в выражении переменная "d" будет иметь значение ло изменения переменной "b",
+        то есть "d" будет равно 1
+        a: 2
+        b: 2
+        c: 2
+        d: 1 
+        */
+        d = b++;
+        console.log(d);
+
+        /*
+        Так как ранее переменная "a" изменилась на 2, то в этом же случии из-за знака ++ она изменится на 3. 
+        то есть значение переменной "c" будет 2 + 3
+        a: 3
+        b: 2
+        c: 5
+        d: 1 
+        */
+        c = 2 + ++a;
+        console.log(c);
+
+        /*
+        Так как ранее переменная "b" изменилась на значение 2, то в этом же случии из-за знака ++ она изменится на значение 3.
+        И также как в предыдущем случае с переменной "b", в уравнении в переменную "b"
+        будет записано значение до изменения - 2. Значит "d" будет равно 2 + 2 = 4.
+        a: 3
+        b: 3
+        c: 5
+        d: 4
+        */
+        d = 2 + b++;
+        console.log(d);
+
+        console.log(a);
+        console.log(b);
+
+
+
+
+        // Задание 2 //
+
+        "use strict";
+
+        let a = 2;
+        let x = 1 + (a *= 2);
+
+        /*
+        "x" будет равен 1 + a*2, что мы видим по формуле. Таким образом выведется 5.
+        А значение "a", из-за знака *= будет изменено на a*2, то есть 4 и в последствие выведено в консоль.
+        Знак *= перезаписывает значение переменной посредством умножения.
+         */
+        console.log(x);
+        console.log(a);
+
+
+
+
+        // Задание 3 //
+
+        const a = Number(prompt('Введите число a'));
+        const b = Number(prompt('Введите число b'));
+
+        if (a > 0 && b > 0) {
+            console.log(a - b);
+        } else if (a < 0 && b < 0) {
+            console.log(a * b);
+        } else if (a > 0 && b < 0 || a < 0 && b > 0) {
+            console.log(a + b);
+        } else {
+            console.log();
+        }
+
+
+
+
+        // Задание 4 //
+
+        const sum = (a, b) => a + b; // sum сумма
+        const dif = (c, d) => (c > d) ? (c - d) : (d - c); // difference разность
+        const mult = (e, f) => e * f; // multiplication умножение
+        const div = (g, h) => g / h; // division деление
+
+        // Альтернативное решение
+        const sum = (a, b) => { // sum сумма
+            return a - b;
+        };
+        const dif = (c, d) => { // difference разность
+            return (c > d) ? (c - d) : (c - d);
+        };
+        const mult = (e, f) => { // multiplication умножение
+            return e * f;
+        };
+        const div = (g, h) => { // division деление
+            return g / h;
+        };
+    </script>
+</body>
+
+</html>
